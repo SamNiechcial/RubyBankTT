@@ -25,5 +25,4 @@ describe Account do
       expect(sams_account.balance).to eq -10
     end
   end
-
 end
