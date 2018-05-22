@@ -18,4 +18,8 @@ class Account
     @transactions
   end
 
+  def withdraw(withdrawal_amount)
+    @balance -= withdrawal_amount
+  end
+
 end
