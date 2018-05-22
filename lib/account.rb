@@ -10,6 +10,10 @@ class Account
     @balance
   end
 
+  def deposit(deposit_amount)
+    @balance += deposit_amount
+  end
+
   def transactions
     @transactions
   end
