@@ -13,10 +13,17 @@ describe Account do
   end
 
   describe '#deposit' do
-      it 'should allow the user to deposit money in the account' do
-        sams_account.deposit(10)
-        expect(sams_account.balance).to eq 10.00
-      end
+    it 'should allow the user to deposit money in the account' do
+      sams_account.deposit(10)
+      expect(sams_account.balance).to eq 10.00
+    end
   end
-  
+
+  describe '#withdraw' do
+    it 'should allow the user to withdraw money from the account' do
+      sams_account.withdraw(10)
+      expect(sams_account.balance).to eq -10
+    end
+  end
+
 end
