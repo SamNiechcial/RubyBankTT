@@ -11,5 +11,12 @@ describe Account do
   it 'should create an account with an empty transactions array' do
     expect(sams_account.transactions).to eq []
   end
+
+  describe '#deposit' do
+      it 'should allow the user to deposit money in the account' do
+        sams_account.deposit(10)
+        expect(sams_account.balance).to eq 10.00
+      end
+  end
   
 end
