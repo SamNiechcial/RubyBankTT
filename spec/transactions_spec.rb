@@ -15,4 +15,12 @@ describe Transaction do
   it 'should insantiate with the correct deposit value' do
     expect(sams_transaction.transaction[:deposit]).to eq 500
   end
+
+  it 'should instantiate with the correct withdrawal value' do
+    expect(sams_transaction.transaction[:withdrawal]).to eq nil
+  end
+
+  it 'should instantiate with the correct balance value' do
+    expect(sams_transaction.transaction[:balance]).to eq 500
+  end 
 end
