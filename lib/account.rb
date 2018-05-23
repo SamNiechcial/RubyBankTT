@@ -1,5 +1,5 @@
-require_relative 'transaction'
 require 'time'
+require_relative 'transaction'
 
 class Account
   attr_reader :balance, :statement
@@ -8,13 +8,13 @@ class Account
 
   def initialize(balance = DEFAULT_BALANCE)
     @balance = balance
+    @current_date = DateTime.now.strftime("%d/%m/%Y")
     @statement = []
   end
 
   def deposit(deposit_amount)
     @balance += deposit_amount
-    current_date = DateTime.now.strftime("%d/%m/%Y")
-    transaction = Transaction.new(current_date, deposit_amount, nil, @balance)
+    transaction = Transaction.new(@current_date, deposit_amount, nil, @balance)
     @statement << transaction
   end
 

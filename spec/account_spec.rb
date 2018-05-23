@@ -29,5 +29,10 @@ describe Account do
       sams_account.withdraw(10)
       expect(sams_account.balance).to eq -10
     end
+
+    it 'should add one transaction object to the statement on withdrawal' do
+      sams_account.withdraw(100)
+      expect(sams_account.statement.length).to eq 1
+    end
   end
 end
