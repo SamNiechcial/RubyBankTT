@@ -1,9 +1,10 @@
-require 'transactions'
+require 'account'
+require 'transaction'
 
-describe 'Transaction' do
+describe Transaction do
+  subject(:sams_transaction) { described_class.new(1, "23/05/2018", 500, nil, 500) }
 
-  it 'should create an object containing hashes of required information' do
-    sams_transaction = Transaction.new(1, "23/05/2018", 500, 0, 500)
-    expect (sams_transaction).to eq(number: 1, date: "23/05/2018", credit: 500, debit: 0, balance: 500)
+  it 'should instantiate with the correct number' do
+    expect(sams_transaction.transaction[:number]).to eq 1
   end
 end

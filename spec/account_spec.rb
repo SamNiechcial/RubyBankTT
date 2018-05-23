@@ -7,8 +7,8 @@ describe Account do
     expect(sams_account.balance).to eq 0
   end
 
-  it 'should create an account with an empty transactions array' do
-    expect(sams_account.transactions).to eq []
+  it 'should create an account with an empty statement array' do
+    expect(sams_account.statement).to eq []
   end
 
   describe '#deposit' do

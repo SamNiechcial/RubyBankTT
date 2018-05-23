@@ -1,11 +1,13 @@
+require 'transaction'
+
 class Account
-  attr_reader :balance, :transactions
+  attr_reader :balance, :statement
 
   DEFAULT_BALANCE = 0.0
 
   def initialize(balance = DEFAULT_BALANCE)
     @balance = balance
-    @transactions = []
+    @statement = []
   end
 
   def deposit(deposit_amount)
