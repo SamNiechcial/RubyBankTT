@@ -1,0 +1,17 @@
+[1] pry(main)> require './lib/account'
+=> true
+[2] pry(main)> sams_account = Account.new
+=> #<Account:0x00007f7f6e1ab590 @balance=0.0, @transactions=[]>
+[3] pry(main)> sams_account.deposit(20)
+=> 20.0
+[4] pry(main)> sams_account
+=> #<Account:0x00007f7f6e1ab590 @balance=20.0, @transactions=[]>
+[5] pry(main)> sams_account.withdraw(40)
+=> -20.0
+[6] pry(main)> sams_account
+=> #<Account:0x00007f7f6e1ab590 @balance=-20.0, @transactions=[]>
+[7] pry(main)> sams_account.deposit(20)
+=> 0.0
+[8] pry(main)> sams_account
+=> #<Account:0x00007f7f6e1ab590 @balance=0.0, @transactions=[]>
+[9] pry(main)> quit
