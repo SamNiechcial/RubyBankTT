@@ -1,7 +1,7 @@
-require 'account'
+require_relative 'account'
 
 class Transaction
-  attr_reader :balance, :transaction
+  attr_reader :transaction
 
   def initialize(date, deposit, withdrawal, balance)
     @transaction = { date: date,

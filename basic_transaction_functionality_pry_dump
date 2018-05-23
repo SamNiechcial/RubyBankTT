@@ -1,0 +1,14 @@
+[1] pry(main)> require './lib/transaction'
+=> true
+[2] pry(main)> sams_transaction = Transaction.new("25/5/2018", 500, 0, 500)
+=> #<Transaction:0x00007fbaad9e8a58 @transaction={:date=>"25/5/2018", :deposit=>500, :withdrawal=>0, :balance=>500}>
+[3] pry(main)> transaction_2 = Transaction.new("25/5/2018", 0, 500, 0, 0)
+ArgumentError: wrong number of arguments (given 5, expected 4)
+from /Users/samniechcial/Documents/Projects/TechTests/RubyBankTT/lib/transaction.rb:6:in `initialize'
+[4] pry(main)> transaction_2 = Transaction.new("25/5/2018", 0, 500, 0)
+=> #<Transaction:0x00007fbaad206128 @transaction={:date=>"25/5/2018", :deposit=>0, :withdrawal=>500, :balance=>0}>
+[5] pry(main)> sams_transaction
+=> #<Transaction:0x00007fbaad9e8a58 @transaction={:date=>"25/5/2018", :deposit=>500, :withdrawal=>0, :balance=>500}>
+[6] pry(main)> transaction_2
+=> #<Transaction:0x00007fbaad206128 @transaction={:date=>"25/5/2018", :deposit=>0, :withdrawal=>500, :balance=>0}>
+[7] pry(main)> quit

@@ -1,4 +1,5 @@
 require 'account'
+require 'transaction'
 
 describe Account do
   subject(:sams_account) { described_class.new }
