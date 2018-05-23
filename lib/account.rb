@@ -20,5 +20,7 @@ class Account
 
   def withdraw(withdrawal_amount)
     @balance -= withdrawal_amount
+    transaction = Transaction.new(@current_date, nil, withdrawal_amount, @balance)
+    @statement << transaction
   end
 end
