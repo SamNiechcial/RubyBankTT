@@ -17,6 +17,11 @@ describe Account do
       sams_account.deposit(10)
       expect(sams_account.balance).to eq 10.00
     end
+
+    it 'should add one transaction object to the statement on deposit' do
+      sams_account.deposit(100)
+      expect(sams_account.statement.length).to eq 1
+    end
   end
 
   describe '#withdraw' do
