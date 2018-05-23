@@ -12,4 +12,7 @@ describe Transaction do
     expect(sams_transaction.transaction[:date]).to eq "23/05/2018"
   end
 
+  it 'should insantiate with the correct deposit value' do
+    expect(sams_transaction.transaction[:deposit]).to eq 500
+  end
 end
