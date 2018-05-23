@@ -39,5 +39,10 @@ describe Account do
       sams_account.withdraw(100)
       expect(sams_account.statement.length).to eq 1
     end
+
+    it 'should add a transaction to the statement containing correct amount' do
+      sams_account.withdraw(100)
+      expect(sams_account.statement[0].transaction[:withdrawal]).to eq 100
+    end
   end
 end
