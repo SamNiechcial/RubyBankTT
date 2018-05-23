@@ -7,4 +7,9 @@ describe Transaction do
   it 'should instantiate with the correct number' do
     expect(sams_transaction.transaction[:number]).to eq 1
   end
+
+  it 'should instantiate with the correct date' do
+    expect(sams_transaction.transaction[:date]).to eq "23/05/2018"
+  end
+
 end
