@@ -8,7 +8,7 @@ class Account
 
   def initialize(balance = DEFAULT_BALANCE)
     @balance = balance
-    @current_date = DateTime.now.strftime("%d/%m/%Y")
+    @current_date = Time.now.strftime('%d/%m/%Y')
     @statement = []
   end
 
