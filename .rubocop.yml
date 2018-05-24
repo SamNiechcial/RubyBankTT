@@ -44,8 +44,8 @@ Metrics/LineLength:
 
 Metrics/LineLength:
   Exclude:
-    - 'spec/**/*'
-    - 'test/**/*'
+    - 'spec/*'
+    - 'test/*'
 
 Metrics/BlockLength:
   Exclude:

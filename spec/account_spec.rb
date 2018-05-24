@@ -14,7 +14,7 @@ describe Account do
 
   describe '#deposit' do
     it 'should allow the user to deposit money in the account' do
-      expect{subject.deposit(10)}.to change{subject.balance}.from(0).to(10.00)
+      expect { subject.deposit(10) }.to change { subject.balance }.from(0).to(10.00)
     end
 
     it 'should add one transaction object to the statement on deposit' do
@@ -30,7 +30,7 @@ describe Account do
 
   describe '#withdraw' do
     it 'should allow the user to withdraw money from the account' do
-      expect{subject.withdraw(10)}.to change{subject.balance}.from(0).to(-10)
+      expect { subject.withdraw(10) }.to change { subject.balance }.from(0).to(-10)
     end
 
     it 'should add one transaction object to the statement on withdrawal' do
