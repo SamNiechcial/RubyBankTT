@@ -1,0 +1,14 @@
+[1] pry(main)> require './lib/account'
+=> true
+[2] pry(main)> sams_account = Account.new
+=> #<Account:0x00007ff72c023e30 @balance=0.0, @current_date="24/05/2018", @statement=[], @transaction_class=Transaction>
+[3] pry(main)> sams_account.deposit(1000)
+=> [#<Transaction:0x00007ff72d222348 @transaction={:date=>"24/05/2018", :deposit=>1000, :withdrawal=>nil, :balance=>1000.0}>]
+[4] pry(main)> sams_account.deposit(2000)
+=> [#<Transaction:0x00007ff72d222348 @transaction={:date=>"24/05/2018", :deposit=>1000, :withdrawal=>nil, :balance=>1000.0}>,
+ #<Transaction:0x00007ff72c92c1a8 @transaction={:date=>"24/05/2018", :deposit=>2000, :withdrawal=>nil, :balance=>3000.0}>]
+[5] pry(main)> sams_account.withdraw(500)
+=> [#<Transaction:0x00007ff72d222348 @transaction={:date=>"24/05/2018", :deposit=>1000, :withdrawal=>nil, :balance=>1000.0}>,
+ #<Transaction:0x00007ff72c92c1a8 @transaction={:date=>"24/05/2018", :deposit=>2000, :withdrawal=>nil, :balance=>3000.0}>,
+ #<Transaction:0x00007ff72d1bba08 @transaction={:date=>"24/05/2018", :deposit=>nil, :withdrawal=>500, :balance=>2500.0}>]
+[6] pry(main)> quit
